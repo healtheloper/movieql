@@ -1,4 +1,4 @@
-const movies = [
+let movies = [
   {
     id: 1,
     name: "Star Wars - The new one",
