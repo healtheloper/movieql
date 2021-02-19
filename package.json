@@ -4,7 +4,7 @@
   "description": "Movie API with GraphQL",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node index.js"
+    "start": "nodemon -L --exec babel-node index.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,8 @@
     "@babel/cli": "^7.12.17",
     "@babel/core": "^7.12.17",
     "@babel/node": "^7.12.17",
-    "@babel/preset-env": "^7.12.17"
+    "@babel/preset-env": "^7.12.17",
+    "axios": "^0.21.1",
+    "node-fetch": "^2.6.1"
   }
 }
