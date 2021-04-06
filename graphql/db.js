@@ -14,6 +14,18 @@ export const getMovies = (limit, rating) => {
     .then((json) => json.data.movies);
 };
 
+export const getMoviesByGenre = (limit, genre) => {
+  let REQUEST_URL = `${API_URL}/list_movies.json?`;
+  if (limit > 0) {
+    REQUEST_URL += `limit=${limit}`;
+  }
+  if (genre) {
+    REQUEST_URL += `&genre=${genre}`;
+  }
+  return fetch(REQUEST_URL)
+    .then((res) => res.json())
+    .then((json) => json.data.movies);
+};
 export const getMovie = (id) => {
   let REQUEST_URL = `${API_URL}/movie_details.json?movie_id=${id}`;
   return fetch(REQUEST_URL)
