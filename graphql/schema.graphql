@@ -3,8 +3,12 @@ type movie {
   title: String!
   rating: Float!
   year: Int!
-  description_intro: String!
+  summary: String!
+  description_full: String!
   medium_cover_image: String!
+  large_cover_image: String!
+  background_image: String!
+  yt_trailer_code: String!
   genres: [String]!
 }
 type Query {

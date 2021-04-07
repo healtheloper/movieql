@@ -16,11 +16,9 @@ export const getMovies = (limit, rating) => {
 
 export const getMoviesByGenre = (limit, genre) => {
   let REQUEST_URL = `${API_URL}/list_movies.json?`;
+  REQUEST_URL += `genre=${genre}&sort_by=year`;
   if (limit > 0) {
-    REQUEST_URL += `limit=${limit}`;
-  }
-  if (genre) {
-    REQUEST_URL += `&genre=${genre}`;
+    REQUEST_URL += `&limit=${limit}`;
   }
   return fetch(REQUEST_URL)
     .then((res) => res.json())
